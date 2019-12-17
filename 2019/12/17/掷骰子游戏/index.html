@@ -54,7 +54,7 @@
 <meta property="og:description" content="c语言基础知识：随机数生成函数rand()与for循环.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;myimage-1253608494.cos.ap-chengdu.myqcloud.com&#x2F;blog&#x2F;%E6%89%B9%E6%B3%A8%202019-12-17%20121057.jpg">
-<meta property="og:updated_time" content="2019-12-17T04:20:39.634Z">
+<meta property="og:updated_time" content="2019-12-17T04:26:06.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;myimage-1253608494.cos.ap-chengdu.myqcloud.com&#x2F;blog&#x2F;%E6%89%B9%E6%B3%A8%202019-12-17%20121057.jpg">
 
@@ -204,7 +204,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-12-17 12:20:39" itemprop="dateCreated datePublished" datetime="2019-12-17T12:20:39+08:00">2019-12-17</time>
+              <time title="Created: 2019-12-17 12:26:06" itemprop="dateCreated datePublished" datetime="2019-12-17T12:26:06+08:00">2019-12-17</time>
             </span>
 
           
@@ -221,7 +221,7 @@
       
         <h3 id="1、很久很久以前"><a href="#1、很久很久以前" class="headerlink" title="1、很久很久以前"></a>1、很久很久以前</h3><p>&emsp;&emsp;很久很久以前，有一个小朋友叫小明<code>int XiaoMing;</code>,他有一个小伙伴叫小梅<code>int XiaoMei;</code>。有一天他们玩掷骰子游戏：</p><ul>
 <li>小明掷到了 一点 <code>rand 1</code></li>
-<li>小梅掷到了 二点 <code>rand 2</code></li>
+<li>小梅掷到了 两点 <code>rand 2</code></li>
 <li>小明掷到了 三点 <code>rand 3</code></li>
 <li>小梅掷到了 四点 <code>rand 4</code></li>
 <li>再次反超！小明掷到了 五点 <code>rand 5</code></li>
@@ -230,8 +230,8 @@
 
 <p>&emsp;&emsp;这时候小明对小梅说：很久很久以前，有一个小朋友叫小明,他有一个小伙伴叫小梅。有一天他们玩掷骰子游戏：</p>
 <ul>
-<li>小明掷到了 一点 <code>rand 1</code></li>
-<li>小梅掷到了 二点 <code>rand 2</code></li>
+<li>小明掷到了 两点 <code>rand 2</code></li>
+<li>小梅掷到了 一点 <code>rand 1</code></li>
 </ul>
 <p>……</p>
 <h3 id="2、for循环"><a href="#2、for循环" class="headerlink" title="2、for循环"></a>2、for循环</h3><p>&emsp;&emsp;小明对小梅说：我们要一直玩下去。小梅说：嗯！<code>for(;;)</code></p>
@@ -255,7 +255,7 @@
 <h3 id="3、c代码示例"><a href="#3、c代码示例" class="headerlink" title="3、c代码示例"></a>3、c代码示例</h3><p>&emsp;&emsp;完整代码如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">10000000</span>; <span class="comment">//定义一共掷几次骰子</span></span><br><span class="line">    <span class="keyword">int</span> Ming = <span class="number">0</span>;         <span class="comment">//定义一个小朋友小明</span></span><br><span class="line">    <span class="keyword">int</span> Mei = <span class="number">0</span>;          <span class="comment">//定义一个小朋友小梅</span></span><br><span class="line">    <span class="keyword">int</span> x,y,z = <span class="number">0</span>;        <span class="comment">//定义点数xy以及平局数z</span></span><br><span class="line"></span><br><span class="line">    srand( (<span class="keyword">unsigned</span>) time(<span class="literal">NULL</span>));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; count; i++) <span class="comment">//循环count次</span></span><br><span class="line">    &#123;</span><br><span class="line">        x = rand()%<span class="number">6</span> + <span class="number">1</span>;   <span class="comment">// x是小明掷的点数</span></span><br><span class="line">        y = rand()%<span class="number">6</span> + <span class="number">1</span>;   <span class="comment">// y是小梅掷的点数</span></span><br><span class="line">        <span class="keyword">if</span> (x &gt; y)          <span class="comment">//如果x&gt;y</span></span><br><span class="line">        &#123;</span><br><span class="line">            Ming++;         <span class="comment">// 记录小明赢的次数加1</span></span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == y)     <span class="comment">// 如果掷的点数x=y</span></span><br><span class="line">            &#123;</span><br><span class="line">                z++;        <span class="comment">//平局数加1</span></span><br><span class="line">            &#125;<span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                Mei++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (Ming &gt; Mei)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"WINNER : Ming.\n小明赢了 %d 次\n"</span>,Ming);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"小梅赢了 %d 次\n"</span>,Mei);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"平局 %d 次\n"</span>,z);</span><br><span class="line">    &#125;<span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Ming == Mei)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"WINNER : Ming and Mei. 他们赢的次数一样多\n"</span>);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"小明赢了 %d 次\n"</span>,Ming);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"小梅赢了 %d 次\n"</span>,Mei);</span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"WINNER : Mei.\n小梅赢了 %d 次\n"</span>,Mei);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"小明赢了 %d 次\n"</span>,Ming);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"平局 %d 次\n"</span>,z);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;&emsp;如果你想让他们第二天再出来玩，复制以上代码，打开<a href="https://www.runoob.com/try/runcode.php?filename=helloworld&type=c" target="_blank" rel="noopener">这个网址</a>,粘贴到左边点击运行就可以让他们再次玩游戏了。可以改动count的值来决定他们一个掷几次骰子。</p>
+<p>&emsp;&emsp;如果你想让他们第二天再出来玩，复制以上代码，点击<a href="https://www.runoob.com/try/runcode.php?filename=helloworld&type=c" target="_blank" rel="noopener">这里</a>,将代码粘贴到左边后点击运行就可以让他们再次玩游戏了。可以改动count的值来决定他们一共掷几次骰子。</p>
 <p><img src="https://myimage-1253608494.cos.ap-chengdu.myqcloud.com/blog/%E6%89%B9%E6%B3%A8%202019-12-17%20121057.jpg" alt></p>
 
     </div>
